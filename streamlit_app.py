@@ -297,6 +297,7 @@ def process_query(query, runner, svc):
             st.session_state.messages.append({"role": "assistant", "content": response, "agent": agent_used, "routing_path": routing_path, "elapsed": elapsed, "time": ts})
         except Exception as e:
             st.session_state.messages.append({"role": "assistant", "content": f"⚠️ Error: {str(e)}", "agent": "school_agent", "routing_path": [], "elapsed": 0, "time": ts})
+            st.session_state["chat_input"] = ""
 
 runner, svc, init_error = init_runner()
 
@@ -582,7 +583,8 @@ with col1:
 with col2:
     send = st.button("➤", use_container_width=True)
 
-if (send or prompt) and prompt and runner:
+if prompt and runner and st.session_state.get("last_query") != prompt:
+    st.session_state["last_query"] = prompt
     process_query(prompt, runner, svc)
     st.rerun()
 
