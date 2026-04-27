@@ -109,17 +109,30 @@ Get your free API key at: https://aistudio.google.com/apikey
 
 ### 5. Run
 
-#### Option A — ADK Web UI (Recommended for demo)
+#### 🌐 Option A — Live Demo (Streamlit Cloud) ⭐ Recommended
+Access the live deployed app instantly — no setup required:
+
+> **[https://meetbhorania-school-agent.streamlit.app](https://school-agent-eqcbb2kpgdghyvzg2s3ec4.streamlit.app/)**
+
+#### 🖥️ Option B — Streamlit UI (Local)
 ```bash
-adk web
+streamlit run streamlit_app.py
 ```
-Then open: **http://localhost:8000**  
+Then open: **http://localhost:8501**
+
+#### 🤖 Option C — ADK Web UI (Local)
+```bash
+adk web --port 8080
+```
+Then open: **http://localhost:8080**  
 Select `school_agent` from the dropdown and start chatting!
 
-#### Option B — CLI Interactive Mode
+#### ⌨️ Option D — CLI Interactive Mode
 ```bash
 python main.py
 ```
+
+---
 
 ---
 
@@ -174,7 +187,7 @@ User → School Agent → [A2A] → Subject Teacher → Response → School Agen
 - Root Agent uses it as fallback for general knowledge queries
 
 ### Models
-All agents use `gemini-2.0-flash` for fast, high-quality responses.
+All agents use `gemini-2.5-flash` for fast, high-quality responses.
 
 ### Transport
 - A2A Communication: JSON over HTTP (via Google ADK)
@@ -231,8 +244,8 @@ MIT License — see [LICENSE](LICENSE)
 ## 👤 Author
 
 **Meet Bhorania**  
-AI Engineer | GDG London  
-[GitHub](https://github.com/YOUR_USERNAME) · [LinkedIn](https://linkedin.com/in/YOUR_LINKEDIN)
+AI Engineer & Builder · GDG London Speaker · Hackathon Winner  
+[GitHub](https://github.com/meetbhorania) · [LinkedIn](https://www.linkedin.com/in/meetbhorania/)
 
 ---
 
