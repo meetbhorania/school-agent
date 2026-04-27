@@ -63,18 +63,20 @@ Teacher       Teacher        (+ search)
 school-agent/
 ├── root_agent.py          # Root orchestrator (School Agent)
 ├── main.py                # CLI entry point + session/memory setup
+├── streamlit_app.py       # Premium Streamlit UI
 ├── requirements.txt       # Python dependencies
 ├── .env.example           # Environment variable template
 ├── .gitignore
 ├── README.md
 └── agents/
     ├── __init__.py
+    ├── agent.py           # ADK entry point (exposes root_agent)
     ├── english_agent.py   # English Teacher
     ├── maths_agent.py     # Maths Teacher + Calculator Tool
     ├── science_agent.py   # Science Teacher
     ├── history_agent.py   # History Teacher
     ├── geography_agent.py # 🔥 Geography Teacher (Level 1)
-    └── cs_agent.py        # 🔥 CS Teacher + Google Search (Level 1)
+    └── cs_agent.py        # 🔥 CS Teacher (Level 1)
 ```
 
 ---
